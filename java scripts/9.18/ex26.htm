@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="con1">
+        <input type="text" id="tf1"/><br>
+        <button onclick="funclk()">확인</button>
+        <button onclick="funRemove()">확인</button>
+    </div>
+    <ul>
+        <li>우유</li>
+        <li>콜라</li>
+        <li>사이다</li>
+    </ul>
+    <ol id="list">
+        <li>유유</li>
+        <li>콜라</li>
+        <li>사이다</li>
+    </ol>
+    <script>
+        function funclk(){
+            const tf1 = document.getElementById('tf1');
+            const c_ol=document.getElementById('list');
+            const c_li = document.createElement('li');
+            const c_li_text = document.createTextNode(tf1.value);
+            c_li.appendChild(c_li_text);
+            c_ol.appendChild(c_li);하
+            tf1.value='';
+        }
+        function funRemove(){
+            const c_ol = document.getElementById('list');
+            // const c_li = document.getElementsByTagName('li');
+            const c_li = document.getElementsByName('li');
+            alert(c_li[0].innerHTML);
+            // alert(c_ol[0].nodeValue);
+            // alert(c_li.length);
+            c_ol.removeChild(c_li[0]);
+        }
+    </script>
+</body>
+</html>

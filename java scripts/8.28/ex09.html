@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name, age){
+            this.name=name;
+            this.age=age;
+            this.intro=function(){
+                document.write("name="+this.name+'<br>'); 
+                document.write("age="+this.age+'<br>');
+            };
+        }
+            var Kim=new Human('김길동',28); //new 생성자
+            var lee=new Human('이철수',33);
+            Kim.intro();
+            lee.intro();
+        
+    </script>
+</body>
+</html>

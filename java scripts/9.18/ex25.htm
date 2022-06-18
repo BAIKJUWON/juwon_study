@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>프로그래밍</h2>
+    <div id="div1">
+        <p id="p1">자바</p>
+        <p id="p2">파이썬</p>
+    </div>
+    <h2>데이터베이스</h2>
+    <div id="div2">
+        <p id="p3">오라클</p>
+        <p id="p4">mysql</p>
+    </div>
+    <div id="div3">
+        <button id="bt1" onclick="add()">추가</button>
+        <button id="bt2" onclick=remove()>삭제</button>
+    </div>
+    <script>
+        function add(){
+            const c_div1 = document.getElementById('div1');
+            const c_p_tag = document.createElement('p');
+            const c_p_node = document.createTextNode('자바스크립트')
+            c_p_tag.appendChild(c_p_node);
+            c_div1.appendChild(c_p_tag);
+        }
+        function remove(){
+            const elemt = document.getElementById('p2');
+            elemt.remove()
+        }
+    </script>
+</body>
+</html>

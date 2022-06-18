@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var human={
+            name:'홍길동',
+            age:28
+        };
+        human.salary=520;
+        delete human.age;
+        document.write(human.name);
+        document.write(human.salary);
+        if('age'in human){
+            document.write('나이 속성이 있습니다.');
+        }
+        if('salary'in human){
+            document.write('봉급 속성이 있습니다.');
+        }
+    </script>
+</body>
+</html>
